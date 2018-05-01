@@ -1,2 +1,6 @@
 # Archivos de Configuracion #
 .DS_Store
+package-lock.json
+
+node_modules/
+
