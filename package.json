@@ -4,6 +4,8 @@
     "description": "Detector de elementos químicos con Augmented Reality",
     "main": "index.js",
     "dependencies": {
+        "aframe": "0.8.0",
+        "jquery": "^3.3.1",
         "webpack": "^4.6.0",
         "webpack-cli": "^2.1.2"
     },
