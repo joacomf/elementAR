@@ -1,6 +1,7 @@
 # Archivos de Configuracion #
 .DS_Store
 package-lock.json
+yarn-error.log
 
 node_modules/
 docs/
