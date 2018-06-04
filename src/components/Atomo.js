@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import Nucleo from './Nucleo';
+import OrbitasGenerador from './OrbitasGenerador';
 
 'use strict';
 
@@ -14,19 +15,24 @@ class Atomo {
     }
     
     crear() {
-
-        this.componente = $('<a-marker></a-marker>').attr('type', 'barcode').attr('value', '3');
+        this.componente = $('<a-marker></a-marker>')
+                            .attr('type', 'barcode')
+                            .attr('value', this.configuracion.numeroAtomico);
         this.insertarNucleo();
     }
     
     insertarNucleo() {
+
+        let numeroAtomico = this.configuracion.numeroAtomico;
+        let configuracionElectronica = this.configuracion.configuracionElectronica;
 
         let container = $('<a-entity></a-entity>')
                             .attr('rotation', '0 0 0')
                             .attr('position', '0 0 0')
                             .attr('scale', '0.4 0.4 0.4');
 
-        let nucleo = new Nucleo();
+        let nucleo = new Nucleo(numeroAtomico);
+        let orbitas = new OrbitasGenerador(configuracionElectronica);
 
         container.append(nucleo.componente);
         this.componente.append(container);

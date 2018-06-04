@@ -5,8 +5,9 @@ import ProtonesNeutronesGenerador from './ProtonesNeutronesGenerador';
 
 class Nucleo {
     
-    constructor(){
+    constructor(numeroAtomico){
         this.componente = null;
+        this.numeroAtomico = numeroAtomico;
 
         this.crear();
     }
@@ -17,7 +18,7 @@ class Nucleo {
                         .attr('rotation', '0 0 0')
                         .attr('scale', '0.4 0.4 0.4');
 
-        let contenido = new ProtonesNeutronesGenerador(5);
+        let contenido = new ProtonesNeutronesGenerador(this.numeroAtomico);
 
         this.componente.append(contenido.componente);
     }
