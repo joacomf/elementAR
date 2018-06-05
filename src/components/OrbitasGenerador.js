@@ -18,7 +18,11 @@ class OrbitasGenerador {
                             .attr('geometry', 'primitive: ring; radiusInner: 6.7; radiusOuter: 6.8')
                             .attr('material', 'side: double');
 
-        let electron = new ElectronesGenerador();
+        let electronGenerador = new ElectronesGenerador();
+
+        let electron_componente = electronGenerador.generar(6.7, 0, 0);
+
+        this.componente.append(electron_componente);
     }
 
     get componente() {

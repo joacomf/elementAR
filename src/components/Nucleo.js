@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import ProtonesNeutronesGenerador from './ProtonesNeutronesGenerador';
+import OrbitasGenerador from './OrbitasGenerador';
 
 'use strict';
 
@@ -19,7 +20,9 @@ class Nucleo {
                         .attr('scale', '0.4 0.4 0.4');
 
         let contenido = new ProtonesNeutronesGenerador(this.numeroAtomico);
+        let orbitas = new OrbitasGenerador({});
 
+        this.componente.append(orbitas.componente);
         this.componente.append(contenido.componente);
     }
 

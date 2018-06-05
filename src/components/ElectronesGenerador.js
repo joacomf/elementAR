@@ -4,23 +4,23 @@ import $ from 'jquery';
 
 class ElectronesGenerador {
 
-    constructor(cantidad) {
-        this.componente = null;
-        this.cantidad = cantidad;
-
+    constructor() {
         this.generar();
     }
 
-    generar() {
-        
-    }
+    generar(x, y, z) {
 
-    get componente() {
-        return this._componente;
-    }
+        let posicion = x + " " + y + " " + z;
 
-    set componente(data) {
-        this._componente = data;
+        let componente = $('<a-entity></a-entity>').attr('position', '0 0 0');
+
+        let animacion = $('<a-animation></a-animation>').attr('mixin', 'orbit').attr('dur', '2000').attr('from', '-120 0 0').attr('to', '240 0 0');
+        let mixin = $('<a-entity></a-entity>').attr('mixin', 'electron').attr('position', posicion);
+
+        componente.append(animacion);
+        componente.append(mixin);
+
+        return componente;
     }
 }
 
