@@ -13,13 +13,11 @@ $.getScript("/assets/vendor/aframe/aframe-ar-v.1.6.0.min.js", function() {
 
     let assets = new AssetsGenerador({});
     let atomo = null;
+
     for(let i = 0; i < 18; i++){
         atomo = new Atomo(elementos[i]);
         escenario.append(atomo.componente);
     }
-    
-    //let atomo = new Atomo(elementos[17]);
-    //escenario.append(atomo.componente);
 
     escenario.append(assets.componente);
     $('body').append(escenario);
