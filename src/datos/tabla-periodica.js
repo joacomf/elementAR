@@ -75,10 +75,8 @@ let tablaPeriodica = {
             nombre: 'Beryllium',
             masaAtomica: '9.012182(3)',
             hexColor: 'C2FF00',
-            configuracionElectronica: {
-                nivel1:[2],
-                nivel2:[2]
-            },
+            configuracionElectronica:
+                [[2],[2]],
             electronegatividad: 1.57,
             radioAtomico: 90,
             radioIonico: '45 (+2)',
@@ -175,10 +173,7 @@ let tablaPeriodica = {
             nombre: 'Oxygen',
             masaAtomica: '15.9994(3)',
             hexColor: 'FF0D0D',
-            configuracionElectronica: {
-                nivel1:[2],
-                nivel2:[2,4]
-            },
+            configuracionElectronica: [[2],[2,4]],
             electronegatividad: 3.44,
             radioAtomico: 73,
             radioIonico: '140 (-2)',
@@ -225,10 +220,8 @@ let tablaPeriodica = {
             nombre: 'Neon',
             masaAtomica: '20.1797(6)',
             hexColor: 'B3E3F5',
-            configuracionElectronica: {
-                nivel1:[2],
-                nivel2:[2,6]
-            },
+            configuracionElectronica:
+                [[2],[2,6]],
             electronegatividad: '',
             radioAtomico: 69,
             radioIonico: '',
@@ -432,11 +425,8 @@ let tablaPeriodica = {
             nombre: 'Argon',
             masaAtomica: '39.948(1)',
             hexColor: '80D1E3',
-            configuracionElectronica: {
-                nivel1:[2],
-                nivel2:[2,6],
-                nivel3:[2,6]
-            },
+            configuracionElectronica: 
+                [[2],[2,6],[2,6]],
             electronegatividad: '',
             radioAtomico: 97,
             radioIonico: '',
