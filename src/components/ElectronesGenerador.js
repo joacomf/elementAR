@@ -14,7 +14,7 @@ class ElectronesGenerador {
 
         let componente = $('<a-entity></a-entity>').attr('position', '0 0 0').attr('scale', '0.4 0.4 0.4');
 
-        let animacion = $('<a-animation></a-animation>').attr('mixin', 'movimiento').attr('dur', '2000');
+        let animacion = $('<a-animation></a-animation>').attr('mixin', 'movimiento').attr('dur', '4000');
         let mixin = $('<a-entity></a-entity>').attr('mixin', 'electron').attr('position', posicion);
 
         componente.append(animacion);
