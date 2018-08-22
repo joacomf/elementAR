@@ -1,12 +1,11 @@
 import $ from 'jquery';
 import ElectronesGenerador from './ElectronesGenerador';
-import configuracionElectronica from '..//datos/configuracion-electronica';
 'use strict';
 
 class OrbitasGenerador {
 
-    constructor(nombreElemento) {
-        this.elemento = configuracionElectronica[nombreElemento];
+    constructor(configuracion) {
+        this.configuracion = configuracion;
         this.componente = null;
         this.generar();
     }
@@ -18,8 +17,10 @@ class OrbitasGenerador {
         let radioGeneral = 7;
         let constanteDeCrecimiento = 1;
 
-        for(const level in this.elemento){     
-            for(const sublevel in this.elemento[level]){
+        let cE = this.configuracion.configuracionElectronica;
+
+        for(const level in cE){     
+            for(const sublevel in cE[level]){
                     
                 let radio = radioGeneral + constanteDeCrecimiento;
                 let nuevaOrbita = $('<a-entity></a-entity>')
