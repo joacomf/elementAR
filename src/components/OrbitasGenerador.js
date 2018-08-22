@@ -1,28 +1,39 @@
 import $ from 'jquery';
 import ElectronesGenerador from './ElectronesGenerador';
-
+import configuracionElectronica from '..//datos/configuracion-electronica';
 'use strict';
 
 class OrbitasGenerador {
 
-    constructor(configuracionElectronica) {
+    constructor(nombreElemento) {
+        this.elemento = configuracionElectronica[nombreElemento];
         this.componente = null;
-        this.configuracionElectronica = configuracionElectronica;
-
         this.generar();
     }
 
+//Ver lectura archivo configelectronica, ver el seteo de posiciones electrones. 
     generar() {
-        this.componente = $('<a-entity></a-entity>')
-                            .attr('rotation', '90 0 0')
-                            .attr('geometry', 'primitive: ring; radiusInner: 6.7; radiusOuter: 6.8')
-                            .attr('material', 'side: double');
+        this.componente = $('<a-entity></a-entity>');
 
-        let electronGenerador = new ElectronesGenerador();
+        let radioGeneral = 7;
+        let constanteDeCrecimiento = 1;
 
-        let electron_componente = electronGenerador.generar(6.7, 0, 0);
-
-        this.componente.append(electron_componente);
+        for(const level in this.elemento){     
+            for(const sublevel in this.elemento[level]){
+                    
+                let radio = radioGeneral + constanteDeCrecimiento;
+                let nuevaOrbita = $('<a-entity></a-entity>')
+                                    .attr('rotation', '90 0 0')
+                                    .attr('geometry', 'primitive: ring; radiusInner: '+ radio +'; radiusOuter:'+ (radio + 0.1))
+                                    .attr('material', 'side: double')  
+                                    .attr('scale', '0.4 0.4 0.4'); //Por que si no lo pongo aca me lo hace mal                      
+                this.componente.append(nuevaOrbita);
+                constanteDeCrecimiento = constanteDeCrecimiento + 1;
+            }
+                
+                radioGeneral = radioGeneral + 3;
+        }  
+       
     }
 
     get componente() {
@@ -35,3 +46,6 @@ class OrbitasGenerador {
 }
 
 export default OrbitasGenerador;
+
+
+

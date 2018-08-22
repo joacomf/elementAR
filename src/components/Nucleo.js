@@ -20,9 +20,9 @@ class Nucleo {
                         .attr('scale', '0.4 0.4 0.4');
 
         let contenido = new ProtonesNeutronesGenerador(this.numeroAtomico);
-        let orbitas = new OrbitasGenerador({});
+        //let orbitas = new OrbitasGenerador('lithium');
 
-        this.componente.append(orbitas.componente);
+        //this.componente.append(orbitas.componente);
         this.componente.append(contenido.componente);
     }
 
