@@ -2,7 +2,6 @@ import $ from 'jquery';
 import Nucleo from './Nucleo';
 import OrbitasGenerador from './OrbitasGenerador';
 import ElectronesGenerador from './ElectronesGenerador';
-import configuracionElectronica from '..//datos/configuracion-electronica';
 
 'use strict';
 
@@ -36,14 +35,13 @@ class Atomo {
                             .attr('scale', '0.4 0.4 0.4');
 
         let nucleo = new Nucleo(numeroAtomico);
-       // let orbitas = new OrbitasGenerador(this.configuracion);
-
         container.append(nucleo.componente);
         this.componente.append(container);
+        
     }
 
     insertarOrbitas(){
-        let orbitas = new OrbitasGenerador(this.configuracion.nombre);
+        let orbitas = new OrbitasGenerador(this.configuracion);
         this.componente.children().append(orbitas.componente);
     }
 
@@ -53,7 +51,7 @@ class Atomo {
         let y=0;
         let z=0;
         let incremento = (2*Math.PI)/(cantidadElectrones);
-        let angulo = 0;
+        let angulo = Math.random()*2*Math.PI;
         for(let i = 0; i<cantidadElectrones; i++){
             x = radio*(Math.cos(angulo));
             z = radio*(Math.sin(angulo));
@@ -66,7 +64,8 @@ class Atomo {
 
     insertarElectrones(){
         
-        let cE = configuracionElectronica[this.configuracion.nombre];
+        //let cE = configuracionElectronica[this.configuracion.nombre];
+        let cE = this.configuracion.configuracionElectronica;
         let radioGeneral = 7;
         let constanteDeCrecimiento = 1;
 
