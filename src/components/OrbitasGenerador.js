@@ -14,15 +14,16 @@ class OrbitasGenerador {
     generar() {
         this.componente = $('<a-entity></a-entity>');
 
-        let radioGeneral = 7;
+        //let radioGeneral = 7;
+        let radioGeneral = this.configuracion.radioAtomico * 0.2;
         let constanteDeCrecimiento = 1;
 
         let cE = this.configuracion.configuracionElectronica;
 
-        for(const level in cE){     
-            for(const sublevel in cE[level]){
+        for(let i=cE.length-1; i>=0; i--){     
+            for(let j=cE[i].length-1; j>=0; j--){
                     
-                let radio = radioGeneral + constanteDeCrecimiento;
+                let radio = radioGeneral - constanteDeCrecimiento;
                 let nuevaOrbita = $('<a-entity></a-entity>')
                                     .attr('rotation', '90 0 0')
                                     .attr('geometry', 'primitive: ring; radiusInner: '+ radio +'; radiusOuter:'+ (radio + 0.1))
@@ -32,7 +33,7 @@ class OrbitasGenerador {
                 constanteDeCrecimiento = constanteDeCrecimiento + 1;
             }
                 
-                radioGeneral = radioGeneral + 3;
+                radioGeneral = radioGeneral - 3;
         }  
        
     }

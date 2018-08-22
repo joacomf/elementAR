@@ -64,22 +64,22 @@ class Atomo {
 
     insertarElectrones(){
         
-        //let cE = configuracionElectronica[this.configuracion.nombre];
         let cE = this.configuracion.configuracionElectronica;
-        let radioGeneral = 7;
+        //let radioGeneral = 7;
+        let radioGeneral = this.configuracion.radioAtomico * 0.2 ;
         let constanteDeCrecimiento = 1;
 
-        for (const level in cE) {  
+        for (let i=cE.length-1; i>=0; i--) {  
                 
-            for(const sublevel in cE[level]){
+            for(let j=cE[i].length-1; j>=0; j--){
                     
-                let radio = radioGeneral + constanteDeCrecimiento;
+                let radio = radioGeneral - constanteDeCrecimiento;
                 let electronGenerador = new ElectronesGenerador();
-                let posiciones = this.calcularPosicionElectron(cE[level][sublevel], radio);     
-                for (let i = 0; i < cE[level][sublevel]; i++) {    
-                    let x = posiciones[i]['x']; 
-                    let y = posiciones[i]['y'];
-                    let z = posiciones[i]['z'];
+                let posiciones = this.calcularPosicionElectron(cE[i][j], radio);     
+                for (let k = 0; k < cE[i][j]; k++) {    
+                    let x = posiciones[k]['x']; 
+                    let y = posiciones[k]['y'];
+                    let z = posiciones[k]['z'];
                     let electron_componente = electronGenerador.generar(x,y,z); 
                     this.componente.children().append(electron_componente); //hago el append dentro de la entidad grande                
                     
@@ -87,7 +87,7 @@ class Atomo {
                 constanteDeCrecimiento = constanteDeCrecimiento + 1;
                 
             }
-            radioGeneral = radioGeneral + 3;                
+            radioGeneral = radioGeneral - 3;                
                 
         } 
     }
