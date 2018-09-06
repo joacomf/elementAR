@@ -6,7 +6,7 @@ let tablaPeriodica = {
             nombre: 'hydrogen',
             masaAtomica: '1.00794(4)',
             hexColor: 'FFFFFF',
-            configuracionElectronica: {nivel1:[1]},
+            configuracionElectronica: [[1]],
             electronegatividad: 2.2,
             radioAtomico: 37,
             radioIonico: '',
@@ -50,10 +50,7 @@ let tablaPeriodica = {
             nombre: 'lithium',
             masaAtomica: '6.941(2)',
             hexColor: 'CC80FF',
-            configuracionElectronica: {
-                nivel1:[2],
-                nivel2:[1]
-            },
+            configuracionElectronica: [[2],[1]],
             electronegatividad: 0.98,
             radioAtomico: 134,
             radioIonico: '76 (+1)',
@@ -148,10 +145,7 @@ let tablaPeriodica = {
             nombre: 'Nitrogen',
             masaAtomica: '14.0067(2)',
             hexColor: '3050F8',
-            configuracionElectronica: {
-                nivel1:[2],
-                nivel2:[2,3]
-            },
+            configuracionElectronica: [[2],[2,3]],
             electronegatividad: 3.04,
             radioAtomico: 75,
             radioIonico: '146 (-3)',
@@ -220,8 +214,7 @@ let tablaPeriodica = {
             nombre: 'Neon',
             masaAtomica: '20.1797(6)',
             hexColor: 'B3E3F5',
-            configuracionElectronica:
-                [[2],[2,6]],
+            configuracionElectronica:[[2],[2,6]],
             electronegatividad: '',
             radioAtomico: 69,
             radioIonico: '',
@@ -243,11 +236,7 @@ let tablaPeriodica = {
             nombre: 'Sodium',
             masaAtomica: '22.98976928(2)',
             hexColor: 'AB5CF2',
-            configuracionElectronica: {
-                nivel1:[2],
-                nivel2:[2,6],
-                nivel3:[1]
-            },
+            configuracionElectronica:[[2],[2,6],[1]],
             electronegatividad: 0.93,
             radioAtomico: 154,
             radioIonico: '102 (+1)',
@@ -321,11 +310,7 @@ let tablaPeriodica = {
             nombre: 'Silicon',
             masaAtomica: '28.0855(3)',
             hexColor: 'F0C8A0',
-            configuracionElectronica:{
-                nivel1:[2],
-                nivel2:[2,6],
-                nivel3:[2,2]
-            },
+            configuracionElectronica:[[2],[2,6],[2,2]],
             electronegatividad: 1.9,
             radioAtomico: 111,
             radioIonico: '40 (+4)',
@@ -425,8 +410,7 @@ let tablaPeriodica = {
             nombre: 'Argon',
             masaAtomica: '39.948(1)',
             hexColor: '80D1E3',
-            configuracionElectronica: 
-                [[2],[2,6],[2,6]],
+            configuracionElectronica: [[2],[2,6],[2,6]],
             electronegatividad: '',
             radioAtomico: 97,
             radioIonico: '',
