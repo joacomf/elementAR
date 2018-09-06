@@ -16,19 +16,18 @@ class OrbitasGenerador {
 
         //let radioGeneral = 7;
         let radioGeneral = this.configuracion.radioAtomico * 0.2;
-        let constanteDeCrecimiento = 1;
+        let constanteDeCrecimiento = 0;
 
         let cE = this.configuracion.configuracionElectronica;
 
         for(let i=cE.length-1; i>=0; i--){     
             for(let j=cE[i].length-1; j>=0; j--){
-                    
                 let radio = radioGeneral - constanteDeCrecimiento;
                 let nuevaOrbita = $('<a-entity></a-entity>')
-                                    .attr('rotation', '90 0 0')
-                                    .attr('geometry', 'primitive: ring; radiusInner: '+ radio +'; radiusOuter:'+ (radio + 0.1))
-                                    .attr('material', 'side: double')  
-                                    .attr('scale', '0.4 0.4 0.4'); //Por que si no lo pongo aca me lo hace mal                      
+                .attr('rotation', '90 0 0')
+                .attr('geometry', 'primitive: ring; radiusInner: '+ radio +'; radiusOuter:'+ (radio + 0.1))
+                .attr('material', 'side: double')  
+                .attr('scale', '0.4 0.4 0.4'); //Por que si no lo pongo aca me lo hace mal                      
                 this.componente.append(nuevaOrbita);
                 constanteDeCrecimiento = constanteDeCrecimiento + 1;
             }
