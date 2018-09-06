@@ -22,6 +22,7 @@ class Atomo {
         this.insertarNucleo();
         this.insertarElectrones();
         this.insertarOrbitas();
+        this.insertarRadio();
     }
     
     insertarNucleo() {
@@ -43,6 +44,16 @@ class Atomo {
     insertarOrbitas(){
         let orbitas = new OrbitasGenerador(this.configuracion);
         this.componente.children().append(orbitas.componente);
+    }
+
+    insertarRadio(){
+        let radio_escalado = (this.configuracion.radioAtomico*0.2);
+        let radio = this.configuracion.radioAtomico;
+        let container =  $('<a-entity id="radio"></entity>').attr('scale','0.4 0.4 0.4').attr('line', 'color: yellow; start: 0, 0, 0; end: '+ radio_escalado +', 0, 0');
+        let containerEtiquetaTexto = $('<a-entity id="texto-radio"></entity>').attr('text', 'color: yellow; xOffset: 12; width: 10; value: Radio atomico: '+ radio)
+        .attr('rotation', '-90 0 0');
+        this.componente.children().append(container);
+        this.componente.children().append(containerEtiquetaTexto);
     }
 
     calcularPosicionElectron(cantidadElectrones, radio){
@@ -67,7 +78,7 @@ class Atomo {
         let cE = this.configuracion.configuracionElectronica;
         //let radioGeneral = 7;
         let radioGeneral = this.configuracion.radioAtomico * 0.2 ;
-        let constanteDeCrecimiento = 1;
+        let constanteDeCrecimiento = 0;
 
         for (let i=cE.length-1; i>=0; i--) {  
                 
