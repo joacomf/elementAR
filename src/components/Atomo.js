@@ -11,7 +11,6 @@ class Atomo {
         
         this.configuracion = configuracion;
         this.componente = null;
-
         this.crear();
     }
     
@@ -23,13 +22,12 @@ class Atomo {
         this.insertarElectrones();
         this.insertarOrbitas();
         this.insertarRadio();
+        this.insertarTabla();
     }
     
     insertarNucleo() {
 
         let numeroAtomico = this.configuracion.numeroAtomico;
-        let configuracionElectronica = this.configuracion.configuracionElectronica;
-
         let container = $('<a-entity></a-entity>')
                             .attr('rotation', '0 0 0')
                             .attr('position', '0 0 0')
@@ -47,13 +45,37 @@ class Atomo {
     }
 
     insertarRadio(){
-        let radio_escalado = (this.configuracion.radioAtomico*0.2);
+        let radioEscalado = (this.configuracion.radioAtomico*0.2);
         let radio = this.configuracion.radioAtomico;
-        let container =  $('<a-entity id="radio"></entity>').attr('scale','0.4 0.4 0.4').attr('line', 'color: yellow; start: 0, 0, 0; end: '+ radio_escalado +', 0, 0');
-        let containerEtiquetaTexto = $('<a-entity id="texto-radio"></entity>').attr('text', 'color: yellow; xOffset: 12; width: 10; value: Radio atomico: '+ radio)
-        .attr('rotation', '-90 0 0');
-        this.componente.children().append(container);
-        this.componente.children().append(containerEtiquetaTexto);
+        let container = $('<a-entity></a-entity>')
+                                .attr('position','0 0 0')
+                                .attr('scale',' 0.16 0.16 0.16'); //REVISAR JERARQUIA DE ESCALAS
+        let vector_radio =  $('<a-entity></entity>')
+                                .attr('mixin','radio')
+                                .attr('line', 'start: 0, 0, 0; end: '+ radioEscalado +', 0, 0');
+        
+        let etiqueta_texto = $('<a-entity></entity>')
+                                .attr('text', 'color: yellow; width: 20; value: Radio atomico: '+ radio)
+                                .attr('position', radioEscalado+10+' 0 0')
+                                .attr('rotation', '-90 0 0');
+        
+        container.append(vector_radio);
+        container.append(etiqueta_texto);
+        this.componente.append(container);
+    }
+    
+    insertarTabla(){
+        let container = $('<a-entity></a-entity>').attr('position','0 0 0');
+        let tabla = $('<a-entity></a-entity>')
+                        .attr('mixin', 'tabla')
+                        .attr('position','2 3 -3')
+                        .attr('rotation','-45 0 0')
+                        .attr('scale',' 2 2 2');
+        let imagen = $('<a-image></a-image>')
+                        .attr('src',this.configuracion.imagen);
+        tabla.append(imagen);
+        container.append(tabla);
+        this.componente.append(container);
     }
 
     calcularPosicionElectron(cantidadElectrones, radio){
