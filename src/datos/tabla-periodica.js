@@ -64,7 +64,8 @@ let tablaPeriodica = {
             puntoDeEbullicion: 1615,
             densidad: 0.535,
             bloqueDeGrupo: 'metal alcalino',
-            descubrimiento: 1817
+            descubrimiento: 1817,
+            imagen: 'img/litio.png'
         },
         {
             numeroAtomico: 4,
@@ -324,7 +325,8 @@ let tablaPeriodica = {
             puntoDeEbullicion: 3173,
             densidad: 2.33,
             bloqueDeGrupo: 'metaloide',
-            descubrimiento: 1854
+            descubrimiento: 1854,
+            imagen: 'img/silicio.png'
         },
         {
             numeroAtomico: 15,
