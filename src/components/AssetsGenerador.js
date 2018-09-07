@@ -18,12 +18,15 @@ class AssetsGenerador {
         let mixin_neutron = $('<a-mixin></a-mixin>').attr('id', 'neutron').attr('geometry', 'primitive: sphere; radius: 0.6').attr('material', 'color: green');
         let mixin_electron = $('<a-mixin></a-mixin>').attr('id', 'electron').attr('geometry', 'primitive: sphere; radius: 0.5').attr('material', 'color: red');
         let mixin_movimiento = $('<a-mixin></a-mixin>').attr('id', 'movimiento').attr('attribute', 'rotation').attr('to', '0 360 0').attr('repeat', 'indefinite').attr('easing','linear').attr('dur','96000');
+        let mixin_tabla = $('<a-mixin></a-mixin>').attr('id', 'tabla').attr('geometry','primitive: plane; height: auto; width: auto').attr('material','opacity: 0');
+        let mixin_radio = $('<a-mixin></a-mixin>').attr('id', 'radio').attr('line','color: yellow');
         this.componente.append(mixin_nucleo);
         this.componente.append(mixin_proton);
         this.componente.append(mixin_neutron);
         this.componente.append(mixin_electron);
         this.componente.append(mixin_movimiento);
-
+        this.componente.append(mixin_tabla);
+        this.componente.append(mixin_radio);
     }
 
     get componente(){
