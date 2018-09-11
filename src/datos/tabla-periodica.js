@@ -20,7 +20,8 @@ let tablaPeriodica = {
             puntoDeEbullicion: 20,
             densidad: 0.0000899,
             bloqueDeGrupo: 'no metal',
-            descubrimiento: 1766
+            descubrimiento: 1766,
+            imagen: 'img/hidrogeno.png'
         },
         {
             numeroAtomico: 2,
@@ -42,7 +43,8 @@ let tablaPeriodica = {
             puntoDeEbullicion: 4,
             densidad: 0.0001785,
             bloqueDeGrupo: 'gas noble',
-            descubrimiento: 1868
+            descubrimiento: 1868,
+            imagen: 'img/helio.png'
         },
         {
             numeroAtomico: 3,
@@ -88,7 +90,8 @@ let tablaPeriodica = {
             puntoDeEbullicion: 2743,
             densidad: 1.848,
             bloqueDeGrupo: 'metal alcalinotérreo',
-            descubrimiento: 1798
+            descubrimiento: 1798,
+            imagen: 'img/berilio.png'
         },
         {
             numeroAtomico: 5,
@@ -113,7 +116,8 @@ let tablaPeriodica = {
             puntoDeEbullicion: 4273,
             densidad: 2.46,
             bloqueDeGrupo: 'metaloide',
-            descubrimiento: 1807
+            descubrimiento: 1807,
+            imagen: 'img/boro.png'
         },
         {
             numeroAtomico: 6,
@@ -138,7 +142,8 @@ let tablaPeriodica = {
             puntoDeEbullicion: 4300,
             densidad: 2.26,
             bloqueDeGrupo: 'no metal',
-            descubrimiento: 'antigüo'
+            descubrimiento: 'antigüo',
+            imagen: 'img/carbono.png'
         },
         {
             numeroAtomico: 7,
@@ -160,7 +165,8 @@ let tablaPeriodica = {
             puntoDeEbullicion: 77,
             densidad: 0.001251,
             bloqueDeGrupo: 'no metal',
-            descubrimiento: 1772
+            descubrimiento: 1772,
+            imagen: 'img/nitrogeno.png'
         },
         {
             numeroAtomico: 8,
@@ -182,7 +188,8 @@ let tablaPeriodica = {
             puntoDeEbullicion: 90,
             densidad: 0.001429,
             bloqueDeGrupo: 'no metal',
-            descubrimiento: 1774
+            descubrimiento: 1774,
+            imagen: 'img/oxigeno.png'
         },
         {
             numeroAtomico: 9,
@@ -207,7 +214,8 @@ let tablaPeriodica = {
             puntoDeEbullicion: 85,
             densidad: 0.001696,
             bloqueDeGrupo: 'halógeno',
-            descubrimiento: 1670
+            descubrimiento: 1670,
+            imagen: 'img/fluor.png'
         },
         {
             numeroAtomico: 10,
@@ -229,7 +237,8 @@ let tablaPeriodica = {
             puntoDeEbullicion: 27,
             densidad: 0.0009,
             bloqueDeGrupo: 'gas noble',
-            descubrimiento: 1898
+            descubrimiento: 1898,
+            imagen: 'img/neon.png'
         },
         {
             numeroAtomico: 11,
@@ -251,7 +260,8 @@ let tablaPeriodica = {
             puntoDeEbullicion: 1156,
             densidad: 0.968,
             bloqueDeGrupo: 'metal alcalino',
-            descubrimiento: 1807
+            descubrimiento: 1807,
+            imagen: 'img/sodio.png'
         },
         {
             numeroAtomico: 12,
@@ -277,7 +287,8 @@ let tablaPeriodica = {
             puntoDeEbullicion: 1363,
             densidad: 1.738,
             bloqueDeGrupo: 'metal alcalinotérreo',
-            descubrimiento: 1808
+            descubrimiento: 1808,
+            imagen: 'img/magnesio.png'
         },
         {
             numeroAtomico: 13,
@@ -303,7 +314,8 @@ let tablaPeriodica = {
             puntoDeEbullicion: 2792,
             densidad: 2.7,
             bloqueDeGrupo: 'metal',
-            descubrimiento: 'antigüo'
+            descubrimiento: 'antigüo',
+            imagen: 'img/aluminio.png'
         },
         {
             numeroAtomico: 14,
@@ -352,7 +364,8 @@ let tablaPeriodica = {
             puntoDeEbullicion: 554,
             densidad: 1.823,
             bloqueDeGrupo: 'no metal',
-            descubrimiento: 1669
+            descubrimiento: 1669,
+            imagen: 'img/fosforo.png'
         },
         {
             numeroAtomico: 16,
@@ -378,7 +391,8 @@ let tablaPeriodica = {
             puntoDeEbullicion: 718,
             densidad: 1.96,
             bloqueDeGrupo: 'no metal',
-            descubrimiento: 'antigüo'
+            descubrimiento: 'antigüo',
+            imagen: 'img/sulfuro.png'
         },
         {
             numeroAtomico: 17,
@@ -404,7 +418,8 @@ let tablaPeriodica = {
             puntoDeEbullicion: 239,
             densidad: 0.003214,
             bloqueDeGrupo: 'halógeno',
-            descubrimiento: 1774
+            descubrimiento: 1774,
+            imagen: 'img/cloro.png'
         },
         {
             numeroAtomico: 18,
@@ -426,7 +441,8 @@ let tablaPeriodica = {
             puntoDeEbullicion: 87,
             densidad: 0.001784,
             bloqueDeGrupo: 'gas noble',
-            descubrimiento: 1894
+            descubrimiento: 1894,
+            imagen: 'img/argon.png'
         },
         {
             numeroAtomico: 19,
