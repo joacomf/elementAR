@@ -28,7 +28,7 @@ let tablaPeriodica = {
             nombre: 'helium',
             masaAtomica: '4.002602(2)',
             hexColor: 'D9FFFF',
-            configuracionElectronica: {nivel1:[2]},
+            configuracionElectronica: [[2]],
             electronegatividad: '',
             radioAtomico: 32,
             radioIonico: '',
@@ -96,10 +96,7 @@ let tablaPeriodica = {
             nombre: 'Boron',
             masaAtomica: '10.811(7)',
             hexColor: 'FFB5B5',
-            configuracionElectronica:{
-                nivel1:[2],
-                nivel2:[2,1]
-            },
+            configuracionElectronica: [[2],[2,1]],
             electronegatividad: 2.04,
             radioAtomico: 82,
             radioIonico: '27 (+3)',
@@ -121,10 +118,7 @@ let tablaPeriodica = {
             nombre: 'Carbon',
             masaAtomica: '12.0107(8)',
             hexColor: 909090,
-            configuracionElectronica: {
-                nivel1:[2],
-                nivel2:[2,2]
-            },
+            configuracionElectronica: [[2],[2,2]],
             electronegatividad: 2.55,
             radioAtomico: 77,
             radioIonico: '16 (+4)',
@@ -190,10 +184,7 @@ let tablaPeriodica = {
             nombre: 'Fluorine',
             masaAtomica: '18.9984032(5)',
             hexColor: 9e+51,
-            configuracionElectronica: {
-                nivel1:[2],
-                nivel2:[2,5]
-            },
+            configuracionElectronica: [[2],[2,5]],
             electronegatividad: 3.98,
             radioAtomico: 71,
             radioIonico: '133 (-1)',
@@ -259,11 +250,7 @@ let tablaPeriodica = {
             nombre: 'Magnesium',
             masaAtomica: '24.3050(6)',
             hexColor: '8AFF00',
-            configuracionElectronica:{
-                nivel1:[2],
-                nivel2:[2,6],
-                nivel3:[2]
-            },
+            configuracionElectronica:[[2],[2,6],[2]],
             electronegatividad: 1.31,
             radioAtomico: 130,
             radioIonico: '72 (+2)',
@@ -285,11 +272,7 @@ let tablaPeriodica = {
             nombre: 'Aluminum',
             masaAtomica: '26.9815386(8)',
             hexColor: 'BFA6A6',
-            configuracionElectronica:{
-                nivel1:[2],
-                nivel2:[2,6],
-                nivel3:[2,1]
-            },
+            configuracionElectronica:[[2],[2,6],[2,1]],
             electronegatividad: 1.61,
             radioAtomico: 118,
             radioIonico: '53.5 (+3)',
@@ -334,11 +317,7 @@ let tablaPeriodica = {
             nombre: 'Phosphorus',
             masaAtomica: '30.973762(2)',
             hexColor: 'FF8000',
-            configuracionElectronica: {
-                nivel1:[2],
-                nivel2:[2,6],
-                nivel3:[2,3]
-            },
+            configuracionElectronica:[[2],[2,6],[2,3]],
             electronegatividad: 2.19,
             radioAtomico: 106,
             radioIonico: '44 (+3)',
@@ -360,11 +339,7 @@ let tablaPeriodica = {
             nombre: 'Sulfur',
             masaAtomica: '32.065(5)',
             hexColor: 'FFFF30',
-            configuracionElectronica: {
-                nivel1:[2],
-                nivel2:[2,6],
-                nivel3:[2,4]
-            },
+            configuracionElectronica:[[2],[2,6],[2,4]],
             electronegatividad: 2.58,
             radioAtomico: 102,
             radioIonico: '184 (-2)',
@@ -386,11 +361,7 @@ let tablaPeriodica = {
             nombre: 'Chlorine',
             masaAtomica: '35.453(2)',
             hexColor: '1FF01F',
-            configuracionElectronica: {
-                nivel1:[2],
-                nivel2:[2,6],
-                nivel3:[2,5]
-            },
+            configuracionElectronica:[[2],[2,6],[2,5]],
             electronegatividad: 3.16,
             radioAtomico: 99,
             radioIonico: '181 (-1)',
